@@ -27,9 +27,8 @@ def make_shirts(ideas):
     # loop through the array
     for idea in ideas:
         print("making t shirt for: " + idea)
-        quit()
         # create image from idea
-        img = image.create_text_image(idea, image_width=8000, image_height=6000, font_size=480)
+        img = image.create_text_image(idea, image_width=8000, image_height=6000, font_size=450)
 
         # save image to disk
         file_path = str(uuid.uuid4()) + ".png"
