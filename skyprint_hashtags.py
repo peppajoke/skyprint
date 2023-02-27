@@ -1,9 +1,8 @@
-import time
 import skyprint
 import hashtag
 import persist
 
-def create_shirts_from_hashtags():
+def generate():
     print("Starting work...")
 
     p = persist.Persist("used_hashtags")
@@ -25,6 +24,3 @@ def create_shirts_from_hashtags():
 
     skyprint.make_shirts(ideas)
 
-while True:
-    create_shirts_from_hashtags()
-    time.sleep(3600)
