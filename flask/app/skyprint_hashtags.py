@@ -23,4 +23,3 @@ def generate():
     ideas = hashtags
 
     skyprint.make_shirts(ideas)
-

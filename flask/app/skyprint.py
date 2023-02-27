@@ -8,7 +8,6 @@ import persist
 import time
 
 def make_shirts(ideas):
-
     p = persist.Persist("used_hashtags")
     used_ideas = p.get()
 
@@ -51,14 +50,14 @@ def make_shirts(ideas):
 
     # wait 5 seconds for the products to land...
     # time.sleep(5)
-
+    shop = shopify2.shop()
     # collect all the new products from shopify
-    new_product_ids = shopify2.get_newest_product_ids(len(ideas)+20)
+    new_product_ids = shop.get_newest_product_ids(len(ideas)+3)
     print("Optimizing SEO...")
 
     # set up SEO
     for new_product_id in new_product_ids:
-        shopify2.set_google_fields_for_t_shirt(new_product_id)
+        shop.set_google_fields_for_t_shirt(new_product_id)
         print("SEO has been set up")
 
 

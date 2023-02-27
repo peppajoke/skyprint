@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    print("oh hello")
+    return "oh hello"
 
 @app.route('/generate')
 def generate():
@@ -16,4 +16,3 @@ def generate():
 
 if __name__ == '__main__':
     app.run(port="8000")
-    
