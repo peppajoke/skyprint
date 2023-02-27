@@ -1,6 +1,4 @@
 
 *.pyc
-used_hashtags
-credentials.py
 .DS_Store
 *.png
