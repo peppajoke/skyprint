@@ -5,7 +5,11 @@ import skyprint_search
 app = Flask(__name__)
 
 @app.route('/')
-def hello_world():
+def hello():
+    print("oh hello")
+
+@app.route('/generate')
+def generate():
     skyprint_hashtags.generate()
     skyprint_search.generate()
     return 'Success!'
